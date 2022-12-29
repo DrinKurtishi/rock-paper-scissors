@@ -86,7 +86,7 @@ for(i = 0; i < 5; i++)
 //determine winner only if all rounds were played (user didn't put invalid text)
 if(i === 5){
     if(UCount === Pcount){
-        console.log("You two drew... you can't even beat a computer that can't think, shame...");
+        console.log("You two drew... you can't even beat an opponent that can't think, shame...");
     }
     else if(UCount > Pcount){
         console.log("You win, but your opponent can't even think, how can you be proud of this achievement? Shame...");
