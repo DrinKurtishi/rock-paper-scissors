@@ -53,7 +53,10 @@ for(let i = 0; i < 5; i++)
     }
 
     UserInput = prompt("Enter your choice here:");
-    UserInput = UserInput.toLowerCase();//turn lowercase
+    UserInput = UserInput.toLowerCase();//turn lowercase.
+
+    //TODO ------> incorporate edge case here when user inputs invalid value
+
     console.log("You chose:", UserInput);
 
     if(UserInput === 'rock'){//change value based on array postiton for comparison
