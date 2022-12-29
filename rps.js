@@ -42,7 +42,8 @@ let Computerchoice;
 let array = ['rock', 'paper', 'scissors'];
 
 console.log("Lets play Rock Paper Scissors! Winner of 5 rounds wins.");
-for(let i = 0; i < 5; i++)
+let i = 0
+for(i = 0; i < 5; i++)
 {
     //print round
     if(i === 4){
@@ -55,35 +56,42 @@ for(let i = 0; i < 5; i++)
     UserInput = prompt("Enter your choice here:");
     UserInput = UserInput.toLowerCase();//turn lowercase.
 
-    //TODO ------> incorporate edge case here when user inputs invalid value
+    if(UserInput === 'rock' || UserInput === 'paper' || UserInput === 'scissors'){
 
-    console.log("You chose:", UserInput);
+        console.log("You chose:", UserInput);
 
-    if(UserInput === 'rock'){//change value based on array postiton for comparison
-        UserInput = 0;
-    }
-    else if(UserInput === 'paper'){
-        UserInput = 1;
-    }
-    else if(UserInput === 'scissors'){
-        UserInput = 2;
-    }
+        if(UserInput === 'rock'){//change value based on array postiton for comparison
+            UserInput = 0;
+        }
+        else if(UserInput === 'paper'){
+            UserInput = 1;
+        }
+        else if(UserInput === 'scissors'){
+            UserInput = 2;
+        }
 
-    Computerchoice = Math.floor(Math.random() * array.length);//select random element from array
-    console.log("Computer chose:", array[Computerchoice]);
-    console.log(PlayRound(UserInput, Computerchoice));//use game mechanic
-    //count score
-    console.log("Your score:", UCount); 
-    console.log("Computer's score:", Pcount);
-    console.log("\n");
+        Computerchoice = Math.floor(Math.random() * array.length);//select random element from array
+        console.log("Computer chose:", array[Computerchoice]);
+        console.log(PlayRound(UserInput, Computerchoice));//use game mechanic
+        //count score
+        console.log("Your score:", UCount); 
+        console.log("Computer's score:", Pcount);
+        console.log("\n");
+    }
+    else{
+        console.log("Invalid input, please refresh page to start over.");
+        break;
+    }
 }
 //determine winner
-if(UCount === Pcount){
-    console.log("You two drew!");
-}
-else if(UCount > Pcount){
-    console.log("Your opponent can't even think, how can you be proud of this achievement? Shame...");
-}
-else{
-    console.log("Your oponent can't even think, and you still managed to lose...");
+if(i === 5){
+    if(UCount === Pcount){
+        console.log("You two drew... you can't even beat a computer that can't think, shame...");
+    }
+    else if(UCount > Pcount){
+        console.log("You win, but your opponent can't even think, how can you be proud of this achievement? Shame...");
+    }
+    else{
+        console.log("You lose and your oponent can't even think, and you still managed to lose...");
+    }
 }
