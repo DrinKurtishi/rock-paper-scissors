@@ -92,6 +92,6 @@ if(i === 5){
         console.log("You win, but your opponent can't even think, how can you be proud of this achievement? Shame...");
     }
     else{
-        console.log("You lose and your oponent can't even think, and you still managed to lose...");
+        console.log("You lose and your oponent can't even think, well done...");
     }
 }
