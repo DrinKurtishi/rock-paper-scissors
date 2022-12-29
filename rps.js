@@ -22,10 +22,10 @@ function PlayRound(UserInput, Computerchoice){
     }
     //when user inputs scissors
     else if(UserInput === 2 && Computerchoice === 0){
-        status = "You lose! Rock beats paper."
+        status = "You lose! Rock beats scissors."
     }
     else if(UserInput === 2 && Computerchoice === 1){
-        status = "You win! Scissors beat paper."
+        status = "You win! Scissors beats paper."
     }
     return status;
 }
