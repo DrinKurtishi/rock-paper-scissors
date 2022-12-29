@@ -83,7 +83,7 @@ for(i = 0; i < 5; i++)
         break;
     }
 }
-//determine winner
+//determine winner only if all rounds were played (user didn't put invalid text)
 if(i === 5){
     if(UCount === Pcount){
         console.log("You two drew... you can't even beat a computer that can't think, shame...");
