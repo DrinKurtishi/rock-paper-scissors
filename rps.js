@@ -54,8 +54,7 @@ for(let i = 0; i < 5; i++)
 
     UserInput = prompt("Enter your choice here:");
     UserInput = UserInput.toLowerCase();//turn lowercase
-    console.log("You chose:");
-    console.log(UserInput);
+    console.log("You chose:", UserInput);
 
     if(UserInput === 'rock'){//change value based on array postiton for comparison
         UserInput = 0;
@@ -68,12 +67,12 @@ for(let i = 0; i < 5; i++)
     }
 
     Computerchoice = Math.floor(Math.random() * array.length);//select random element from array
-    console.log("Computers chose:");
-    console.log(array[Computerchoice]);
+    console.log("Computer chose:", array[Computerchoice]);
     console.log(PlayRound(UserInput, Computerchoice));//use game mechanic
     //count score
-    console.log("Your score:"); console.log(UCount);
-    console.log("Computer's score:"); console.log(Pcount);
+    console.log("Your score:", UCount); 
+    console.log("Computer's score:", Pcount);
+    console.log("\n");
 }
 //determine winner
 if(UCount === Pcount){
