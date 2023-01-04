@@ -41,17 +41,14 @@ let UserInput;
 let Computerchoice;
 let array = ['rock', 'paper', 'scissors'];
 
-console.log("Lets play Rock Paper Scissors! Winner of 5 rounds wins.");
+console.log("Lets play Rock Paper Scissors! First to 5 wins.");
 let i = 0
-for(i = 0; i < 5; i++)
+while(UCount < 5 && Pcount < 5)
 {
     //print round
-    if(i === 4){
-        console.log("FINAL ROUND");
-    }
-    else{
-        console.log("Round", i+1);
-    }
+    let round = 1
+    console.log("Round", round++);
+   
     UserInput = prompt("Enter your choice here:");
     UserInput = UserInput.toLowerCase();//turn lowercase.
 
@@ -83,11 +80,8 @@ for(i = 0; i < 5; i++)
     }
 }
 //determine winner only if all rounds were played (user didn't put invalid text)
-if(i === 5){
-    if(UCount === Pcount){
-        console.log("You two drew... you can't even beat an opponent that can't think, shame...");
-    }
-    else if(UCount > Pcount){
+if(UCount === 5 || Pcount === 5){
+    if(UCount > Pcount){
         console.log("You win, but your opponent can't even think, how can you be proud of this achievement? Shame...");
     }
     else{
