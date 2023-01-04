@@ -52,7 +52,6 @@ for(i = 0; i < 5; i++)
     else{
         console.log("Round", i+1);
     }
-
     UserInput = prompt("Enter your choice here:");
     UserInput = UserInput.toLowerCase();//turn lowercase.
 
