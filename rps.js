@@ -7,7 +7,7 @@ let Computerchoice;
 let UCount = 0;//user score
 let Pcount = 0;//Computer score
 
-function compare(UserInput, Computerchoice)
+function Game(UserInput, Computerchoice)
 {
     //if theyre the same do this
     if(UserInput === Computerchoice){
@@ -64,16 +64,16 @@ function compare(UserInput, Computerchoice)
 rockbtn.addEventListener('click', function(){
     UserInput = 0;//rock
     Computerchoice = Math.floor(Math.random() * array.length);//random
-    compare(UserInput, Computerchoice);
+    Game(UserInput, Computerchoice);
 });
 paperbtn.addEventListener('click', function(){
     UserInput = 1;//paper
     Computerchoice = Math.floor(Math.random() * array.length);//random
-    compare(UserInput, Computerchoice);
+    Game(UserInput, Computerchoice);
 });
 scissorsbtn.addEventListener('click', function(){
     UserInput = 2;//scissors
     Computerchoice = Math.floor(Math.random() * array.length);//random
-    compare(UserInput, Computerchoice);
+    Game(UserInput, Computerchoice);
 });
 
