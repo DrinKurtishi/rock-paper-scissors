@@ -42,11 +42,11 @@ let Computerchoice;
 let array = ['rock', 'paper', 'scissors'];
 
 console.log("Lets play Rock Paper Scissors! First to 5 wins.");
-let i = 0
+let i = 0;
+let round = 1;
 while(UCount < 5 && Pcount < 5)
 {
     //print round
-    let round = 1
     console.log("Round", round++);
    
     UserInput = prompt("Enter your choice here:");
