@@ -36,9 +36,9 @@ body{
 .options:hover:enabled{
     scale: 1.2;
     transition: 0.1s ease-in-out;
+    cursor: pointer;
 }
 .options:active:enabled{
     scale: 1.1;
     transition: 0.1;
 }
-
