@@ -6,9 +6,42 @@ let UserInput;
 let Computerchoice;
 let UCount = 0;//user score
 let Pcount = 0;//Computer score
+let image = document.createElement("img");
+let pcimage = document.createElement("img");
+
+//display initial Game State.
+document.getElementById('MyScore').innerHTML = "<br> Your score: " + UCount;
+document.getElementById('PCscore').innerHTML = "<br>Computers score: " + Pcount;
+document.getElementById("output").innerHTML = "Are you ready?"; 
 
 function Game(UserInput, Computerchoice)
 {
+    //put desired image of users choice
+    if(UserInput === 0){//display rock
+        image.src = 'images/rock.png';
+    }
+    else if(UserInput === 1){//display paper
+        image.src = 'images/paper.png';
+    }
+    else if(UserInput === 2){//display scissors
+        image.src = 'images/scissors.png';
+    }
+
+    //put desired image of computers choice
+    if(Computerchoice === 0){//display rock //WHY DOESNT IT WORKKKKK AAAA TODOOOOOOOOOO
+        pcimage.src = 'PC images/rockPC.png';
+    }
+    else if(Computerchoice === 1){//display paper
+        pcimage.src = 'PC images/paperPC.png';
+    }
+    else if(Computerchoice === 2){//display scissors
+        pcimage.src = 'PC images/scissorsPC.png';
+    }
+
+     //display chosen elements
+     document.getElementById("PCpic").appendChild(pcimage);//FUFKCING DISPLAY THE IMAGEEEEEEEE TOOOOOODOOOOOO
+     document.getElementById("MyPic").appendChild(image);
+
     //if theyre the same do this
     if(UserInput === Computerchoice){
         document.getElementById("output").innerHTML = "Draw!"
@@ -40,7 +73,8 @@ function Game(UserInput, Computerchoice)
         UCount++;
         document.getElementById("output").innerHTML = "You win! Scissors beats paper."
     }
-    document.getElementById('scoreboard').innerHTML = "<br> Your score: " + UCount + "<br>Computers score: " + Pcount;
+    document.getElementById('MyScore').innerHTML = "<br> Your score: " + UCount;
+    document.getElementById('PCscore').innerHTML = "<br>Computers score: " + Pcount;
     //determine winner
     if(UCount === 5 || Pcount === 5)
     {

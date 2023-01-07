@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="rps.js" defer></script>
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
     <div class="hero">
@@ -18,10 +18,19 @@
         </div>
     </div>
     <div class="UI">
-        <div class="GameState">
-            <div id="scoreboard"></div> 
-            <div id="output"></div>
+        <div class="scoreboard">
+                <div id="MyScore"></div>
+                <div id="PCscore"></div>
+        </div> 
+        <div class="choices">
+            <div id="Mychoice">Your choice:</div>
+            <div id="PCchoice">Computers choice:</div>
         </div>
+        <div class="choice-pics">
+            <div id="MyPic"></div>
+            <div id="PCpic"></div>
+        </div>
+        <div id="output"></div>
         <div class="buttons">
             <button class="options" id="rock"><img src="images/rock.png"></button>
             <button class="options" id="paper"><img src="images/paper.png"></button>
