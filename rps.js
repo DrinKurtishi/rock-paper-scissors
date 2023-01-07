@@ -48,7 +48,7 @@ function Game(UserInput, Computerchoice)
        document.querySelector("#rock").disabled = true;
        document.querySelector("#paper").disabled = true;
        document.querySelector("#scissors").disabled = true;
-       //determine winnter
+       //determine winner
        if(UCount === 5)
        {
             document.getElementById("output").innerHTML = "You defeated the computer!"; 
