@@ -102,7 +102,7 @@ function DetermineOutcome(UserInput, Computerchoice){
 
 }
 
-function Game(UserInput, Computerchoice)
+function Game()
 {
     DisplayChoices(UserInput, Computerchoice);
     DetermineOutcome(UserInput, Computerchoice);
@@ -111,16 +111,16 @@ function Game(UserInput, Computerchoice)
 rockbtn.addEventListener('click', function(){//when user presses rock
     UserInput = 0;//rock
     Computerchoice = Math.floor(Math.random() * array.length);//random
-    Game(UserInput, Computerchoice);
+    Game();
 });
 paperbtn.addEventListener('click', function(){//... when paper
     UserInput = 1;//paper
     Computerchoice = Math.floor(Math.random() * array.length);//random
-    Game(UserInput, Computerchoice);
+    Game();
 });
 scissorsbtn.addEventListener('click', function(){//... when scissors
     UserInput = 2;//scissors
     Computerchoice = Math.floor(Math.random() * array.length);//random
-    Game(UserInput, Computerchoice);
+    Game();
 });
 
