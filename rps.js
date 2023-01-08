@@ -1,4 +1,4 @@
-let rockbtn = document.querySelector('#rock');
+let rockbtn = document.querySelector('#rock');//the three buttons
 let paperbtn = document.querySelector('#paper');
 let scissorsbtn = document.querySelector('#scissors');
 let array = ['rock', 'paper', 'scissors'];
@@ -13,10 +13,10 @@ let pcimage = document.createElement("img");//PC choice image
 document.getElementById('MyScore').innerHTML = "<br> Your score: " + UCount;
 document.getElementById('PCscore').innerHTML = "<br>Computers score: " + Pcount;
 document.getElementById("output").innerHTML = "Are you ready?"; 
-image.src = "images/grey.png";
-pcimage.src = "images/grey.png";
-document.getElementById("MyPic").appendChild(image);//add 2 images first as placeholders
-document.getElementById("PCpic").appendChild(pcimage);  
+image.src = "images/grey.png";//add 2 images first 
+pcimage.src = "images/grey.png";//as placeholders
+document.getElementById("MyPic").appendChild(image);//adding the
+document.getElementById("PCpic").appendChild(pcimage);//placeholders
 //end of initial game state
 
 
