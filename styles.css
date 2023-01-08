@@ -2,6 +2,8 @@ body{
     background-color: black;
     color: aliceblue;
     margin: 0px;
+    font-family: 'Silkscreen', 'Courier New', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 .hero{
     display: flex;
@@ -9,12 +11,11 @@ body{
     align-items: center;
 }
 .Header{
-    font-family: 'Courier New', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 50px;
     margin-bottom: -40px;
+    margin-top: -30px;
 }
 .Subtext{
-    font-family: 'Courier New', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     font-size: 25px;
 }
 .UI{
@@ -23,8 +24,9 @@ body{
     align-items: center;
 }
 .options img{
-    width: 100px;
-    height: 100px;
+    width: 115px;
+    height: 115px;
+    
 }
 .options{
     color: transparent; 
@@ -47,9 +49,12 @@ body{
     gap: 60px;
     padding: 20px;
     margin-bottom: 20px;
+    font-size: 20px;
 }
 #output{
-    padding: 20px;
+    padding: 40px;
+    padding-top: 10px;
+    font-size: 25px;
 }
 .choices{
     display: flex;
@@ -57,10 +62,15 @@ body{
 }
 .choice-pics{
     padding: 40px;
+    padding-top: 10px;
     display: flex;
     gap: 100px;
 }
 .choice-pics img{
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
+}
+.buttons{
+    display: flex;
+    gap: 25px;
 }
