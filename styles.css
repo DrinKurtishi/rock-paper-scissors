@@ -18,6 +18,9 @@ body{
 .Subtext{
     font-size: 25px;
 }
+.subtext{
+    margin: 0px;
+}
 .UI{
     display: flex;
     flex-direction: column;
@@ -46,13 +49,13 @@ body{
 }
 .scoreboard{
     display: flex;
-    gap: 60px;
-    padding: 20px;
-    margin-bottom: 20px;
+    gap: 80px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
     font-size: 20px;
 }
 #output{
-    padding: 40px;
+    
     padding-top: 10px;
     font-size: 25px;
 }
@@ -61,10 +64,11 @@ body{
     gap: 60px;
 }
 .choice-pics{
-    padding: 40px;
     padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
-    gap: 100px;
+    gap: 140px;
+    align-items: center;
 }
 .choice-pics img{
     width: 140px;
@@ -73,4 +77,64 @@ body{
 .buttons{
     display: flex;
     gap: 25px;
+    margin-top: 10px;
+}
+#final-output{
+    font-size: 25px;
+    min-height: 32px;
+    margin: 10px;
+    margin-bottom: 15;
+}
+#replaybtn{
+  align-self: center;
+  background-color: rgb(0, 0, 0);
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Silkscreen", sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: rgb(255, 255, 255) 2px 8px 8px -5px;
+  min-width: 82px;
+}
+
+#replaybtn:hover {
+  box-shadow: rgb(255, 255, 255) 2px 12px 12px -5px;
+  transform: translate3d(0, 1px, 0);
+}
+
+#replaybtn:active {
+  box-shadow: rgb(255, 255, 255) 2px 8px 4px -6px;
+}
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+
+@media only screen and (max-width: 600px){
+  
 }
