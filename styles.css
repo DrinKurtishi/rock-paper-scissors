@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: #121212;
     color: whitesmoke;
     margin: 0px;
     font-family: 'Silkscreen', 'Courier New', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -7,7 +7,7 @@ body{
 }
 .hero{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 .Header{
@@ -15,8 +15,19 @@ body{
     margin-bottom: -40px;
     margin-top: -30px;
 }
+#github, #odin{
+    height: 50px;
+    width: auto;
+}
+.right{
+    display: flex;
+    gap: 20px;
+    padding-right: 25px;
+}
 .Subtext{
     font-size: 25px;
+    display: flex;
+    justify-content: center;
 }
 .subtext{
     margin: 0px;
@@ -27,8 +38,8 @@ body{
     align-items: center;
 }
 .options img{
-    width: 115px;
-    height: 115px;
+    width: 90px;
+    height: 90px;
     
 }
 .options{
