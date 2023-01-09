@@ -9,14 +9,28 @@
     <script src="rps.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
-<body>
+<body id="body">
     <div class="hero">
+        <div class="left">
+            <div class="choose-bgc">Choose bgcolor</div>
+            <div class="bgcolors">
+                <button class="bgbtn" id="purple" onclick="purple()"></button>
+                <button class="bgbtn" id="blue" onclick="blue()"></button>
+                <button class="bgbtn" id="yellow" onclick="yellow()"></button>
+                <button class="bgbtn" id="white" onclick="white()"></button>
+                <button class="bgbtn" id="black" onclick="black()"></button>
+            </div>
+        </div>
         <div class="Header">
             <p class="typewriter">ROCK PAPER SCISSORS</p>
         </div>
-        <div class="Subtext">
-            <p class="subtext">First to three wins.</p>
+        <div class="right">
+        <a href="https://github.com/DrinKurtishi/rock-paper-scissors" target=”_blank”><img src="images/github.png" id="github"></a>
+        <a href="https://www.theodinproject.com/" target="_blank"><img src="images/odin-lined.png" id="odin"></a>
         </div>
+    </div>
+    <div class="Subtext">
+        <p class="subtext">First to three wins.</p>
     </div>
     <div class="UI">
         <div class="scoreboard">
@@ -37,7 +51,7 @@
     </div>
     <div class="bottom">
         <button id="replaybtn" onclick="replayGame()">New game</button>
-        <p class="creditText">Drin Kurtishi 2023 @ theOdinProject</p>
+        <p class="creditText">Copyright © Drin Kurtishi LLC, all rights reserved. </p>
     </div>
 </body>
 </html>

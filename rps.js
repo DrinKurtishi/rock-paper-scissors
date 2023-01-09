@@ -19,10 +19,12 @@ document.getElementById("MyPic").appendChild(image);//adding the
 document.getElementById("PCpic").appendChild(pcimage);//placeholders
 //end of initial game state
 
+document.getElementById("body").style.backgroundColor = "#FFDB58"
+//TODO -> save background color info for user
+
 function replayGame(){//replays game on button click
     window.location.reload();
 }
-
 function DisplayChoices(UserInput, Computerchoice){
         //put desired image of users choice
         if(UserInput === 0){//display rock
@@ -93,7 +95,7 @@ function DetermineOutcome(UserInput, Computerchoice){
            document.querySelector("#scissors").disabled = true;
            //determine winner
            if(UCount === 3){
-                document.getElementById("final-output").style.color = "lime";
+                document.getElementById("final-output").style.color = "#059c0f";
                 document.getElementById("final-output").innerHTML = "You defeated A.I.!"; 
            }
            else {
@@ -127,3 +129,32 @@ scissorsbtn.addEventListener('click', function(){//... when scissors
     Game();
 });
 
+//for background choosing
+function transition(){
+    document.body.style.transition="1s";
+}
+function purple(){
+    document.body.style.backgroundColor="#3a093a";
+    document.body.style.color = "whitesmoke";
+    transition();
+}
+function blue(){
+    document.body.style.backgroundColor = "#010150";
+    document.body.style.color = "whitesmoke";
+    transition();
+}
+function yellow(){
+    document.body.style.backgroundColor="#FFDB58";
+    document.body.style.color = "#121212";
+    transition();
+}
+function white(){
+    document.body.style.backgroundColor="white";
+    document.body.style.color = "#121212";
+    transition();
+}
+function black(){
+    document.body.style.backgroundColor="#121212";
+    document.body.style.color = "whitesmoke";
+    transition();
+}
