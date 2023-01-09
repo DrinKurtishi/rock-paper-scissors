@@ -1,6 +1,6 @@
 body{
     background-color: black;
-    color: aliceblue;
+    color: whitesmoke;
     margin: 0px;
     font-family: 'Silkscreen', 'Courier New', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
@@ -87,7 +87,7 @@ body{
 }
 #replaybtn{
   align-self: center;
-  background-color: rgb(0, 0, 0);
+  background-color: #121212;
   background-image: none;
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
@@ -130,7 +130,20 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 30px;
+    padding-bottom: 0px;
+    gap: 20px;
+}
+.credit{
+   display: flex;
+   align-items:flex-end;
+   padding: 18px;
+   border: 10px;
+}
+.creditText{
+    margin: 0px;
+    margin-top: 40px;
 }
 
 

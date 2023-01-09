@@ -71,7 +71,7 @@ function DetermineOutcome(UserInput, Computerchoice){
         }
         else if(UserInput === 1 && Computerchoice === 2){
             Pcount++;
-            document.getElementById("output").innerHTML = "You lose! Scissors beat paper."
+            document.getElementById("output").innerHTML = "You lose! Scissors beats paper."
         }
         //when user inputs scissors
         else if(UserInput === 2 && Computerchoice === 0){
@@ -93,11 +93,11 @@ function DetermineOutcome(UserInput, Computerchoice){
            document.querySelector("#scissors").disabled = true;
            //determine winner
            if(UCount === 3){
-                document.getElementById("final-output").style.color = "green";
+                document.getElementById("final-output").style.color = "lime";
                 document.getElementById("final-output").innerHTML = "You defeated A.I.!"; 
            }
            else {
-                document.getElementById("final-output").style.color = "red";
+                document.getElementById("final-output").style.color = "#FF0000";
                 document.getElementById("final-output").innerHTML = "You got defeated by A.I.!";
            }
     
