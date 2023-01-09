@@ -11,7 +11,7 @@ let pcimage = document.createElement("img");//PC choice image
 
 //display initial Game State.
 document.getElementById('MyScore').innerHTML = "<br> Your score: " + UCount;
-document.getElementById('PCscore').innerHTML = "<br>Computers score: " + Pcount;
+document.getElementById('PCscore').innerHTML = "<br> A.I's score: " + Pcount;
 document.getElementById("output").innerHTML = "Are you ready?"; 
 image.src = "images/grey.png";//add 2 images first 
 pcimage.src = "images/grey.png";//as placeholders
@@ -19,6 +19,9 @@ document.getElementById("MyPic").appendChild(image);//adding the
 document.getElementById("PCpic").appendChild(pcimage);//placeholders
 //end of initial game state
 
+function replayGame(){//replays game on button click
+    window.location.reload();
+}
 
 function DisplayChoices(UserInput, Computerchoice){
         //put desired image of users choice
@@ -80,22 +83,22 @@ function DetermineOutcome(UserInput, Computerchoice){
             document.getElementById("output").innerHTML = "You win! Scissors beats paper."
         }
         document.getElementById('MyScore').innerHTML = "<br> Your score: " + UCount;
-        document.getElementById('PCscore').innerHTML = "<br>Computers score: " + Pcount;
+        document.getElementById('PCscore').innerHTML = "<br> A.I's score: " + Pcount;
         //determine winner
-        if(UCount === 5 || Pcount === 5)
+        if(UCount === 3 || Pcount === 3)
         {
-           //disable buttons after either player reaches 5 wins
+           //disable buttons after either player reaches 3 wins
            document.querySelector("#rock").disabled = true;
            document.querySelector("#paper").disabled = true;
            document.querySelector("#scissors").disabled = true;
            //determine winner
-           if(UCount === 5)
-           {
-                document.getElementById("output").innerHTML = "You defeated the computer!"; 
+           if(UCount === 3){
+                document.getElementById("final-output").style.color = "green";
+                document.getElementById("final-output").innerHTML = "You defeated A.I.!"; 
            }
-           else
-           {
-                document.getElementById("output").innerHTML = "You have been defeated by the computer!";
+           else {
+                document.getElementById("final-output").style.color = "red";
+                document.getElementById("final-output").innerHTML = "You got defeated by A.I.!";
            }
     
         }
