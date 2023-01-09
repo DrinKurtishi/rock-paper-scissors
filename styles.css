@@ -21,6 +21,11 @@
     gap: 20px;
     padding-right: 25px;
 }
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .Subtext{
     font-size: 25px;
     display: flex;
@@ -103,9 +108,8 @@
   border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
   border-style: solid;
   border-width: 2px;
-  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: whitesmoke;
   cursor: pointer;
   display: inline-block;
   font-family: "Silkscreen", sans-serif;
@@ -185,15 +189,4 @@
 .bgbtn:active{
     scale: 1;
     transition: 0.1s;
-}
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 600px){
-  
 }
