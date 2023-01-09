@@ -1,9 +1,6 @@
-body{
-    background-color: #121212;
-    color: whitesmoke;
+#body{
     margin: 0px;
     font-family: 'Silkscreen', 'Courier New', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
 .hero{
     display: flex;

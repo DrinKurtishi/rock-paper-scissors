@@ -19,10 +19,12 @@ document.getElementById("MyPic").appendChild(image);//adding the
 document.getElementById("PCpic").appendChild(pcimage);//placeholders
 //end of initial game state
 
+document.getElementById("body").style.backgroundColor = "#FFDB58"
+//TODO -> save background color info for user
+
 function replayGame(){//replays game on button click
     window.location.reload();
 }
-
 function DisplayChoices(UserInput, Computerchoice){
         //put desired image of users choice
         if(UserInput === 0){//display rock
@@ -151,7 +153,6 @@ function white(){
     document.body.style.color = "#121212";
     transition();
 }
-
 function black(){
     document.body.style.backgroundColor="#121212";
     document.body.style.color = "whitesmoke";
