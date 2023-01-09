@@ -11,7 +11,18 @@
 </head>
 <body>
     <div class="hero">
-        <div class="choose-bgc">Choose bgc</div>
+        <div class="left">
+            <div class="choose-bgc">Choose bgcolor</div>
+            <div class="bgcolors">
+                <button class="bgbtn" id="purple" onclick="purple()"></button>
+                <button class="bgbtn" id="blue" onclick="blue()"></button>
+                <button class="bgbtn" id="yellow" onclick="yellow()"></button>
+                <button class="bgbtn" id="white" onclick="white()"></button>
+                <button class="bgbtn" id="black" onclick="black()"></button>
+            </div>
+        </div>
+
+
         <div class="Header">
             <p class="typewriter">ROCK PAPER SCISSORS</p>
         </div>
@@ -46,9 +57,11 @@
             <button class="options" id="scissors"><img src="images/scissors.png"></button>
         </div>
     </div>
+
+
     <div class="bottom">
         <button id="replaybtn" onclick="replayGame()">New game</button>
-        <p class="creditText">Drin Kurtishi 2023 @ theOdinProject</p>
+        <p class="creditText">Copyright © Drin Kurtishi LLC, all rights reserved. </p>
     </div>
 </body>
 </html>

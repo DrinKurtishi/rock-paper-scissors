@@ -98,7 +98,7 @@ body{
 }
 #replaybtn{
   align-self: center;
-  background-color: #121212;
+  background-color: #202020;
   background-image: none;
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
@@ -144,7 +144,7 @@ body{
     flex-direction: column;
     padding: 30px;
     padding-bottom: 0px;
-    gap: 20px;
+    gap: 30px;
 }
 .credit{
    display: flex;
@@ -155,7 +155,45 @@ body{
 .creditText{
     margin: 0px;
     margin-top: 40px;
+    opacity: 0.5;
+    font-size: 13px;
 }
+.left{
+    padding-left: 25px;
+}
+#purple{
+    background-color: #3a093a;
+}
+#blue{
+    background-color: #010150;
+}
+#yellow{
+    background-color: #FFDB58;
+}
+#white{
+    background-color: white;
+}
+#black{
+    background-color: #121212;
+}
+.bgbtn{
+    padding: 10px;
+    border: solid;
+    border-color: #5e5e5e;
+}
+.bgbtn:hover{
+    scale: 1.1;
+    transition: 0.1s;
+}
+.bgbtn:active{
+    scale: 1;
+    transition: 0.1s;
+}
+
+
+
+
+
 
 
 
