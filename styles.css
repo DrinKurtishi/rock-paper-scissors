@@ -147,17 +147,19 @@
     padding-bottom: 0px;
     gap: 30px;
 }
-.credit{
-   display: flex;
-   align-items:flex-end;
-   padding: 18px;
-   border: 10px;
+.footer{
+    display: flex;
+    justify-content: center;
 }
+
 .creditText{
     margin: 0px;
     margin-top: 40px;
     opacity: 0.5;
     font-size: 13px;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 8px;
 }
 .left{
     padding-left: 25px;
