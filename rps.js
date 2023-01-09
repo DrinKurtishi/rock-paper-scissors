@@ -17,10 +17,11 @@ image.src = "images/grey.png";//add 2 images first
 pcimage.src = "images/grey.png";//as placeholders
 document.getElementById("MyPic").appendChild(image);//adding the
 document.getElementById("PCpic").appendChild(pcimage);//placeholders
+document.getElementById("body").style.backgroundColor = "#121212";
+document.getElementById("body").style.color = "whitesmoke";
 //end of initial game state
 
-document.getElementById("body").style.backgroundColor = "#FFDB58"
-//TODO -> save background color info for user
+//TODO -> save background color info for user, probably not possible
 
 function replayGame(){//replays game on button click
     window.location.reload();
@@ -106,7 +107,6 @@ function DetermineOutcome(UserInput, Computerchoice){
         }
 
 }
-
 function Game()
 {
     DisplayChoices(UserInput, Computerchoice);
@@ -136,25 +136,35 @@ function transition(){
 function purple(){
     document.body.style.backgroundColor="#3a093a";
     document.body.style.color = "whitesmoke";
+    document.getElementById("replaybtn").style.backgroundColor = "#202020";
+    document.getElementById("replaybtn").style.color = "whitesmoke";
     transition();
 }
 function blue(){
     document.body.style.backgroundColor = "#010150";
     document.body.style.color = "whitesmoke";
+    document.getElementById("replaybtn").style.backgroundColor = "#202020";
+    document.getElementById("replaybtn").style.color = "whitesmoke";
     transition();
 }
 function yellow(){
     document.body.style.backgroundColor="#FFDB58";
     document.body.style.color = "#121212";
+    document.getElementById("replaybtn").style.backgroundColor = "#cacccb";
+    document.getElementById("replaybtn").style.color = "#121212";
     transition();
 }
 function white(){
     document.body.style.backgroundColor="white";
     document.body.style.color = "#121212";
+    document.getElementById("replaybtn").style.backgroundColor = "#cacccb";
+    document.getElementById("replaybtn").style.color = "#121212";
     transition();
 }
 function black(){
     document.body.style.backgroundColor="#121212";
     document.body.style.color = "whitesmoke";
+    document.getElementById("replaybtn").style.backgroundColor = "#202020";
+    document.getElementById("replaybtn").style.color = "whitesmoke";
     transition();
 }
