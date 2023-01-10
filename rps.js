@@ -14,8 +14,8 @@ let pcimage = document.createElement("img");//PC choice image
 //display initial Game State.
 document.getElementById('myRounds').innerHTML = UGcount;
 document.getElementById('PCrounds').innerHTML = PGcount;
-document.getElementById('MyScore').innerHTML = "<br> Your score: " + UCount;
-document.getElementById('PCscore').innerHTML = "<br> A.I's score: " + Pcount;
+document.getElementById('MyScore').innerHTML = UCount;
+document.getElementById('PCscore').innerHTML = Pcount;
 document.getElementById("output").innerHTML = "Are you ready?"; 
 image.src = "images/grey.png";//add 2 images first 
 pcimage.src = "images/grey.png";//as placeholders
@@ -27,10 +27,14 @@ document.getElementById("body").style.color = "whitesmoke";
 
 
 function newRound(){//replays round on button click(i did it like this to save chosen background color of user)
+   if(UCount != 3 && Pcount != 3){//dont let user change round mid game
+    alert("You can't restart a round!");
+    return;
+   }
    UCount=0;
    Pcount=0;
-   document.getElementById('MyScore').innerHTML = "<br> Your score: " + UCount;
-   document.getElementById('PCscore').innerHTML = "<br> A.I's score: " + Pcount;
+   document.getElementById('MyScore').innerHTML = UCount;
+   document.getElementById('PCscore').innerHTML = Pcount;
    document.getElementById("output").innerHTML = "Are you ready?"; 
    document.getElementById("final-output").innerHTML = "";
    document.querySelector("#rock").disabled = false;
@@ -108,8 +112,8 @@ function DetermineOutcome(UserInput, Computerchoice){
             UCount++;
             document.getElementById("output").innerHTML = "You win! Scissors beats paper."
         }
-        document.getElementById('MyScore').innerHTML = "<br> Your score: " + UCount;
-        document.getElementById('PCscore').innerHTML = "<br> A.I's score: " + Pcount;
+        document.getElementById('MyScore').innerHTML = UCount;
+        document.getElementById('PCscore').innerHTML = Pcount;
         //determine winner
         if(UCount === 3 || Pcount === 3)
         {

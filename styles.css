@@ -79,10 +79,10 @@
     gap: 60px;
 }
 .choice-pics{
-    padding-top: 10px;
+    padding-top: 50px;
     padding-bottom: 10px;
     display: flex;
-    gap: 140px;
+    gap: 20px;
     align-items: center;
 }
 .choice-pics img{
