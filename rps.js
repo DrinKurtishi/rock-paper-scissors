@@ -23,8 +23,19 @@ document.getElementById("body").style.color = "whitesmoke";
 
 //TODO -> save background color info for user, probably not possible
 
-function replayGame(){//replays game on button click
-    window.location.reload();
+function replayGame(){//replays game on button click(i did it like this to save chosen background color of user)
+   UCount=0;
+   Pcount=0;
+   document.getElementById('MyScore').innerHTML = "<br> Your score: " + UCount;
+   document.getElementById('PCscore').innerHTML = "<br> A.I's score: " + Pcount;
+   document.getElementById("final-output").innerHTML = "";
+   document.querySelector("#rock").disabled = false;
+   document.querySelector("#paper").disabled = false;
+   document.querySelector("#scissors").disabled = false;
+   image.src = "images/grey.png";//add 2 images first 
+   pcimage.src = "images/grey.png";//as placeholders
+   document.getElementById("MyPic").appendChild(image);//adding the
+   document.getElementById("PCpic").appendChild(pcimage);//placeholders
 }
 function DisplayChoices(UserInput, Computerchoice){
         //put desired image of users choice
