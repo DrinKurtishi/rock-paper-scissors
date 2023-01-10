@@ -6,12 +6,16 @@ let UserInput;
 let Computerchoice;
 let UCount = 0;//user score
 let Pcount = 0;//Computer score
+let UGcount = 0;
+let PGcount = 0;
 let image = document.createElement("img");//user choice image
 let pcimage = document.createElement("img");//PC choice image
 
 //display initial Game State.
-document.getElementById('MyScore').innerHTML = "<br> Your score: " + UCount;
-document.getElementById('PCscore').innerHTML = "<br> A.I's score: " + Pcount;
+document.getElementById('myRounds').innerHTML = UGcount;
+document.getElementById('PCrounds').innerHTML = PGcount;
+document.getElementById('MyScore').innerHTML = UCount;
+document.getElementById('PCscore').innerHTML = Pcount;
 document.getElementById("output").innerHTML = "Are you ready?"; 
 image.src = "images/grey.png";//add 2 images first 
 pcimage.src = "images/grey.png";//as placeholders
@@ -21,10 +25,33 @@ document.getElementById("body").style.backgroundColor = "#121212";
 document.getElementById("body").style.color = "whitesmoke";
 //end of initial game state
 
-//TODO -> save background color info for user, probably not possible
 
-function replayGame(){//replays game on button click
-    window.location.reload();
+function newRound(){//replays round on button click(i did it like this to save chosen background color of user)
+   if(UCount != 3 && Pcount != 3){//dont let user change round mid game
+    alert("You can't restart a round!");
+    return;
+   }
+   UCount=0;
+   Pcount=0;
+   document.getElementById('MyScore').innerHTML = UCount;
+   document.getElementById('PCscore').innerHTML = Pcount;
+   document.getElementById("output").innerHTML = "Are you ready?"; 
+   document.getElementById("final-output").innerHTML = "";
+   document.querySelector("#rock").disabled = false;
+   document.querySelector("#paper").disabled = false;
+   document.querySelector("#scissors").disabled = false;
+   image.src = "images/grey.png";//add 2 images first 
+   pcimage.src = "images/grey.png";//as placeholders
+   document.getElementById("MyPic").appendChild(image);//adding the
+   document.getElementById("PCpic").appendChild(pcimage);//placeholders
+}
+function newGame(){
+   UGcount = 0;
+   PGcount = 0;
+   document.getElementById('myRounds').innerHTML = UGcount;
+   document.getElementById('PCrounds').innerHTML = PGcount;
+   document.querySelector('#newRound').disabled = false;
+   newRound();
 }
 function DisplayChoices(UserInput, Computerchoice){
         //put desired image of users choice
@@ -85,8 +112,8 @@ function DetermineOutcome(UserInput, Computerchoice){
             UCount++;
             document.getElementById("output").innerHTML = "You win! Scissors beats paper."
         }
-        document.getElementById('MyScore').innerHTML = "<br> Your score: " + UCount;
-        document.getElementById('PCscore').innerHTML = "<br> A.I's score: " + Pcount;
+        document.getElementById('MyScore').innerHTML = UCount;
+        document.getElementById('PCscore').innerHTML = Pcount;
         //determine winner
         if(UCount === 3 || Pcount === 3)
         {
@@ -96,12 +123,26 @@ function DetermineOutcome(UserInput, Computerchoice){
            document.querySelector("#scissors").disabled = true;
            //determine winner
            if(UCount === 3){
+                UGcount++;
+                document.getElementById('myRounds').innerHTML = UGcount;
                 document.getElementById("final-output").style.color = "#059c0f";
-                document.getElementById("final-output").innerHTML = "You defeated A.I.!"; 
+                document.getElementById("final-output").innerHTML = "You won this round!"; 
            }
            else {
+                PGcount++;
+                document.getElementById('PCrounds').innerHTML = PGcount;
                 document.getElementById("final-output").style.color = "#FF0000";
-                document.getElementById("final-output").innerHTML = "You got defeated by A.I.!";
+                document.getElementById("final-output").innerHTML = "You lost this round!";
+           }
+           if(UGcount === 3){
+                document.querySelector('#newRound').disabled = true;
+                document.getElementById("final-output").style.color = "#059c0f";
+                document.getElementById("final-output").innerHTML = "You defeated the A.I!"; 
+           }
+           else if(PGcount === 3){
+                document.querySelector('#newRound').disabled = true;
+                document.getElementById("final-output").style.color = "#FF0000";
+                document.getElementById("final-output").innerHTML = "You got defeated by A.I!";
            }
     
         }
@@ -136,35 +177,45 @@ function transition(){
 function purple(){
     document.body.style.backgroundColor="#3a093a";
     document.body.style.color = "whitesmoke";
-    document.getElementById("replaybtn").style.backgroundColor = "#202020";
-    document.getElementById("replaybtn").style.color = "whitesmoke";
+    document.getElementById("newRound").style.backgroundColor = "#202020";
+    document.getElementById("newRound").style.color = "whitesmoke";
+    document.getElementById("newGame").style.backgroundColor = "#202020";
+    document.getElementById("newGame").style.color = "whitesmoke";
     transition();
 }
 function blue(){
     document.body.style.backgroundColor = "#010150";
     document.body.style.color = "whitesmoke";
-    document.getElementById("replaybtn").style.backgroundColor = "#202020";
-    document.getElementById("replaybtn").style.color = "whitesmoke";
+    document.getElementById("newRound").style.backgroundColor = "#202020";
+    document.getElementById("newRound").style.color = "whitesmoke";
+    document.getElementById("newGame").style.backgroundColor = "#202020";
+    document.getElementById("newGame").style.color = "whitesmoke";
     transition();
 }
 function yellow(){
     document.body.style.backgroundColor="#FFDB58";
     document.body.style.color = "#121212";
-    document.getElementById("replaybtn").style.backgroundColor = "#cacccb";
-    document.getElementById("replaybtn").style.color = "#121212";
+    document.getElementById("newRound").style.backgroundColor = "#cacccb";
+    document.getElementById("newRound").style.color = "#121212";
+    document.getElementById("newGame").style.backgroundColor = "#cacccb";
+    document.getElementById("newGame").style.color = "#121212";
     transition();
 }
 function white(){
     document.body.style.backgroundColor="white";
     document.body.style.color = "#121212";
-    document.getElementById("replaybtn").style.backgroundColor = "#cacccb";
-    document.getElementById("replaybtn").style.color = "#121212";
+    document.getElementById("newRound").style.backgroundColor = "#cacccb";
+    document.getElementById("newRound").style.color = "#121212";
+    document.getElementById("newGame").style.backgroundColor = "#cacccb";
+    document.getElementById("newGame").style.color = "#121212";
     transition();
 }
 function black(){
     document.body.style.backgroundColor="#121212";
     document.body.style.color = "whitesmoke";
-    document.getElementById("replaybtn").style.backgroundColor = "#202020";
-    document.getElementById("replaybtn").style.color = "whitesmoke";
+    document.getElementById("newRound").style.backgroundColor = "#202020";
+    document.getElementById("newRound").style.color = "whitesmoke";
+    document.getElementById("newGame").style.backgroundColor = "#202020";
+    document.getElementById("newGame").style.color = "whitesmoke";
     transition();
 }
