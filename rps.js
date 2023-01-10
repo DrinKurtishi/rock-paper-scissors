@@ -48,10 +48,22 @@ function newRound(){//replays round on button click(i did it like this to save c
 function newGame(){
    UGcount = 0;
    PGcount = 0;
+   UCount=0;
+   Pcount=0;
    document.getElementById('myRounds').innerHTML = UGcount;
    document.getElementById('PCrounds').innerHTML = PGcount;
    document.querySelector('#newRound').disabled = false;
-   newRound();
+   document.getElementById('MyScore').innerHTML = UCount;
+   document.getElementById('PCscore').innerHTML = Pcount;
+   document.getElementById("output").innerHTML = "Are you ready?"; 
+   document.getElementById("final-output").innerHTML = "";
+   document.querySelector("#rock").disabled = false;
+   document.querySelector("#paper").disabled = false;
+   document.querySelector("#scissors").disabled = false;
+   image.src = "images/grey.png";//add 2 images first 
+   pcimage.src = "images/grey.png";//as placeholders
+   document.getElementById("MyPic").appendChild(image);//adding the
+   document.getElementById("PCpic").appendChild(pcimage);//placeholders
 }
 function DisplayChoices(UserInput, Computerchoice){
         //put desired image of users choice
