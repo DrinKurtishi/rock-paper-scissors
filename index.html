@@ -33,29 +33,45 @@
         </div>
     </div>
     <div class="Subtext">
-        <p class="subtext">First to three wins.</p>
+        <p class="subtext">First to three wins the round.</p>
+        <p class="subsubtext">Win three rounds to win the game.</p>
     </div>
-    <div class="UI">
-        <div class="scoreboard">
-                <div id="MyScore"></div>
-                <div id="PCscore"></div>
-        </div> 
-        <div class="choice-pics">
-            <div id="MyPic"></div>
-            <div id="PCpic"></div>
+
+    <div class="Mid-section">
+        <div class="User-rounds">
+            <p>User rounds won</p>
+            <div id="myRounds"></div>
         </div>
-        <div id="output"></div>
-        <dic id="final-output"></dic>
-        <div class="buttons">
-            <button class="options" id="rock"><img src="images/rock.png"></button>
-            <button class="options" id="paper"><img src="images/paper.png"></button>
-            <button class="options" id="scissors"><img src="images/scissors.png"></button>
+        <div class="UI-section">
+            <div class="UI">
+                <div class="scoreboard">
+                    <div id="MyScore"></div>
+                    <div id="PCscore"></div>
+                </div> 
+                <div class="choice-pics">
+                <div id="MyPic"></div>
+                <div id="PCpic"></div>
+                </div>
+                <div id="output"></div>
+                <div id="final-output"></div>
+                <div class="buttons">
+                    <button class="options" id="rock"><img src="images/rock.png"></button>
+                    <button class="options" id="paper"><img src="images/paper.png"></button>
+                    <button class="options" id="scissors"><img src="images/scissors.png"></button>
+                </div>
+            </div>
+            <div class="gameButtons">
+                <button id="newRound" onclick="newRound()">Next round</button>
+                <button id="newGame" onclick="newGame()">New game</button>
+            </div>
+        </div>
+        <div class="PC-rounds">
+            <p>A.I rounds won</p>
+            <div id="PCrounds"></div>
         </div>
     </div>
-    <div class="bottom">
-        <button id="replaybtn" onclick="replayGame()">New game</button>
-    </div>
-        <div class="footer">
+
+    <div class="footer">
         <p class="creditText">Copyright © Drin Kurtishi LLC, all rights reserved. </p>
     </div>
 </div>

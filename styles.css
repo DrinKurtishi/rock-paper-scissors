@@ -29,7 +29,9 @@
 .Subtext{
     font-size: 25px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .subtext{
     margin: 0px;
@@ -62,7 +64,7 @@
 }
 .scoreboard{
     display: flex;
-    gap: 80px;
+    gap: 100px;
     padding-bottom: 10px;
     margin-bottom: 10px;
     font-size: 20px;
@@ -98,7 +100,7 @@
     margin: 10px;
     margin-bottom: 15;
 }
-#replaybtn{
+#newRound, #newGame{
   align-self: center;
   background-color: #202020;
   background-image: none;
@@ -130,19 +132,18 @@
   min-width: 82px;
 }
 
-#replaybtn:hover {
+#newRound:hover, #newGame:hover {
   box-shadow: rgb(255, 255, 255) 2px 12px 12px -5px;
   transform: translate3d(0, 1px, 0);
 }
 
-#replaybtn:active {
+#newRound:active, #newGame:active {
   box-shadow: rgb(255, 255, 255) 2px 8px 4px -6px;
 }
-.bottom{
+.gameButtons{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     padding: 30px;
     padding-bottom: 0px;
     gap: 30px;
@@ -191,4 +192,26 @@
 .bgbtn:active{
     scale: 1;
     transition: 0.1s;
+}
+.UI-section{
+    margin-top: -20px;
+}
+.Mid-section{
+    display: flex;
+    justify-content: space-between;
+}
+.User-rounds{
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.PC-rounds{
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#myRounds, #PCrounds{
+    font-size: 80px;
 }
