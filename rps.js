@@ -116,6 +116,7 @@ function DetermineOutcome(UserInput, Computerchoice){
             UCount++;
             document.getElementById("output").innerHTML = "You win! Scissors beats paper."
         }
+        //display current score
         document.getElementById('MyScore').innerHTML = UCount;
         document.getElementById('PCscore').innerHTML = Pcount;
         //determine winner
