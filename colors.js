@@ -18,7 +18,7 @@ function LightTheme(){
     document.getElementById("newGame").style.color = "#121212";
 }
 function purple(){
-    document.body.style.backgroundColor="#3a093a";
+    document.body.style.backgroundColor="#3a093a";//background color
     DarkTheme();
     transition();
 }
@@ -33,7 +33,7 @@ function yellow(){
     transition();
 }
 function white(){
-    document.body.style.backgroundColor="white";
+    document.body.style.backgroundColor="#F2F3F4";
     LightTheme();
     transition();
 }
