@@ -65,7 +65,7 @@ function DisplayChoices(UserInput, Computerchoice){
         else if(UserInput === 1){//display paper
             image.src = 'images/paper.png';
         }
-        else if(UserInput === 2){//display scissors
+        else{//display scissors
             image.src = 'images/scissors.png';
         }
     
@@ -76,7 +76,7 @@ function DisplayChoices(UserInput, Computerchoice){
         else if(Computerchoice === 1){//display paper
             pcimage.src = 'images/paperPC.png';
         }
-        else if(Computerchoice === 2){//display scissors
+        else{//display scissors
             pcimage.src = 'images/scissorsPC.png';
         }
     
