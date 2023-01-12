@@ -6,8 +6,8 @@ let UserInput;
 let Computerchoice;
 let UCount = 0;//user score
 let Pcount = 0;//Computer score
-let UGcount = 0;
-let PGcount = 0;
+let UGcount = 0;//User rounds score
+let PGcount = 0;//PC rounds score
 let image = document.createElement("img");//user choice image
 let pcimage = document.createElement("img");//PC choice image
 
@@ -26,11 +26,7 @@ document.getElementById("body").style.color = "whitesmoke";
 //end of initial game state
 
 
-function newRound(){//replays round on button click(i did it like this to save chosen background color of user)
-   if(UCount != 3 && Pcount != 3){//dont let user change round mid game
-    alert("You can't restart a round!");
-    return;
-   }
+function resetScores(){
    UCount=0;
    Pcount=0;
    document.getElementById('MyScore').innerHTML = UCount;
@@ -45,25 +41,21 @@ function newRound(){//replays round on button click(i did it like this to save c
    document.getElementById("MyPic").appendChild(image);//adding the
    document.getElementById("PCpic").appendChild(pcimage);//placeholders
 }
+
+function newRound(){//new round on button click
+   if(UCount != 3 && Pcount != 3){//dont let user change round mid game
+    alert("You can't restart a round!");
+    return;
+    }
+    resetScores();
+}
+   
 function newGame(){
-   UGcount = 0;
+   UGcount = 0;//also reset round scores
    PGcount = 0;
-   UCount=0;
-   Pcount=0;
-   document.getElementById('myRounds').innerHTML = UGcount;
+   document.getElementById('myRounds').innerHTML = UGcount;//display round scores
    document.getElementById('PCrounds').innerHTML = PGcount;
-   document.querySelector('#newRound').disabled = false;
-   document.getElementById('MyScore').innerHTML = UCount;
-   document.getElementById('PCscore').innerHTML = Pcount;
-   document.getElementById("output").innerHTML = "Are you ready?"; 
-   document.getElementById("final-output").innerHTML = "";
-   document.querySelector("#rock").disabled = false;
-   document.querySelector("#paper").disabled = false;
-   document.querySelector("#scissors").disabled = false;
-   image.src = "images/grey.png";//add 2 images first 
-   pcimage.src = "images/grey.png";//as placeholders
-   document.getElementById("MyPic").appendChild(image);//adding the
-   document.getElementById("PCpic").appendChild(pcimage);//placeholders
+   resetScores();
 }
 function DisplayChoices(UserInput, Computerchoice){
         //put desired image of users choice
@@ -73,7 +65,7 @@ function DisplayChoices(UserInput, Computerchoice){
         else if(UserInput === 1){//display paper
             image.src = 'images/paper.png';
         }
-        else if(UserInput === 2){//display scissors
+        else{//display scissors
             image.src = 'images/scissors.png';
         }
     
@@ -84,7 +76,7 @@ function DisplayChoices(UserInput, Computerchoice){
         else if(Computerchoice === 1){//display paper
             pcimage.src = 'images/paperPC.png';
         }
-        else if(Computerchoice === 2){//display scissors
+        else{//display scissors
             pcimage.src = 'images/scissorsPC.png';
         }
     
@@ -124,6 +116,7 @@ function DetermineOutcome(UserInput, Computerchoice){
             UCount++;
             document.getElementById("output").innerHTML = "You win! Scissors beats paper."
         }
+        //display current score
         document.getElementById('MyScore').innerHTML = UCount;
         document.getElementById('PCscore').innerHTML = Pcount;
         //determine winner
