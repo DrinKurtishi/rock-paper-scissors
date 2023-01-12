@@ -55,6 +55,7 @@ function newGame(){
    PGcount = 0;
    document.getElementById('myRounds').innerHTML = UGcount;//display round scores
    document.getElementById('PCrounds').innerHTML = PGcount;
+   document.querySelector('#newRound').disabled = false;//enable round button again
    resetScores();
 }
 function DisplayChoices(UserInput, Computerchoice){
