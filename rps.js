@@ -41,12 +41,19 @@ function resetScores(){
    document.getElementById("MyPic").appendChild(image);//adding the
    document.getElementById("PCpic").appendChild(pcimage);//placeholders
 }
-
 function newRound(){//new round on button click
-   if(UCount != 3 && Pcount != 3){//dont let user change round mid game
-    alert("You can't restart a round!");
+   if(UCount === 0 && Pcount === 0){//if round hasnt started dont do anything on newRound button click
     return;
-    }
+   }
+   else if(UCount != 3 && Pcount != 3){//dont let user change round mid game
+    document.getElementById("final-output").style.color = "#FF0000";
+    document.getElementById("final-output").innerHTML = "YOU CANNOT RESTART A ROUND."
+    return;
+   }
+   if(UGcount === 3 || PGcount === 3){//if game is over then tell user to start a new game
+    document.getElementById("final-output").innerHTML = "Please start a new game."
+    return;
+   }
     resetScores();
 }
    
@@ -55,7 +62,7 @@ function newGame(){
    PGcount = 0;
    document.getElementById('myRounds').innerHTML = UGcount;//display round scores
    document.getElementById('PCrounds').innerHTML = PGcount;
-   document.querySelector('#newRound').disabled = false;//enable round button again
+ //  document.querySelector('#newRound').disabled = false;//enable round button again
    resetScores();
 }
 function DisplayChoices(UserInput, Computerchoice){
@@ -141,12 +148,12 @@ function DetermineOutcome(UserInput, Computerchoice){
                 document.getElementById("final-output").innerHTML = "You lost this round!";
            }
            if(UGcount === 3){
-                document.querySelector('#newRound').disabled = true;
+               // document.querySelector('#newRound').disabled = true;
                 document.getElementById("final-output").style.color = "#059c0f";
                 document.getElementById("final-output").innerHTML = "You defeated the A.I!"; 
            }
            else if(PGcount === 3){
-                document.querySelector('#newRound').disabled = true;
+              //  document.querySelector('#newRound').disabled = true;
                 document.getElementById("final-output").style.color = "#FF0000";
                 document.getElementById("final-output").innerHTML = "You got defeated by A.I!";
            }
@@ -156,6 +163,7 @@ function DetermineOutcome(UserInput, Computerchoice){
 }
 function Game()
 {
+    document.getElementById("final-output").innerHTML = ""//remove text of user if he tried to restart a round
     DisplayChoices(UserInput, Computerchoice);
     DetermineOutcome(UserInput, Computerchoice);
 }
