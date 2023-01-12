@@ -19,8 +19,8 @@ function LightTheme(){
     document.getElementById("newRound").style.color = "#121212";
     document.getElementById("newGame").style.backgroundColor = "#cacccb";
     document.getElementById("newGame").style.color = "#121212";
-    document.getElementById("newRound").style.boxShadow = "black 2px 8px 8px -5px";
-    document.getElementById("newGame").style.boxShadow = "black 2px 8px 8px -5px";
+    document.getElementById("newRound").style.boxShadow = "#121212 2px 8px 8px -5px";
+    document.getElementById("newGame").style.boxShadow = "#121212 2px 8px 8px -5px";
 }
 function purple(){
     document.body.style.backgroundColor="#3a093a";//background color
