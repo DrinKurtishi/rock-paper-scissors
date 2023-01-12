@@ -250,9 +250,6 @@
     .typewriter, .subsubtext, .subtext{
         text-align: center;
     }
-    .Mid-section{
-        scale: 0.5;
-    }
     .User-rounds{
         padding-left: 0px;
     }
@@ -260,7 +257,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        align-content: flex-start;
+        justify-content: center;
+    }
+    .Subtext{
+        scale: 0.8;
+    }
+    .Mid-section{
+        margin-top: -110px;
+        scale: 0.6;
+        padding-left: 90px;
+        
     }
 
 
