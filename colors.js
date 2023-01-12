@@ -28,7 +28,7 @@ function purple(){
     transition();
 }
 function blue(){
-    document.body.style.backgroundColor = "#010150";
+    document.body.style.backgroundColor = "rgb(30, 50, 90)";
     DarkTheme();
     transition();
 }
@@ -38,7 +38,7 @@ function yellow(){
     transition();
 }
 function white(){
-    document.body.style.backgroundColor="#F2F3F4";
+    document.body.style.backgroundColor="rgb(220, 220, 180)";
     LightTheme();
     transition();
 }
