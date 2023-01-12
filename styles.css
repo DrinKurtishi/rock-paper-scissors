@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 25px;
 }
 .Subtext{
     font-size: 25px;
@@ -162,9 +163,6 @@
     bottom: 0;
     padding-bottom: 8px;
 }
-.left{
-    padding-left: 25px;
-}
 #purple{
     background-color: #3a093a;
 }
@@ -214,4 +212,58 @@
 }
 #myRounds, #PCrounds{
     font-size: 80px;
+}
+/*for phone*/
+@media only screen and (max-width: 600px){
+    .hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .Header{
+        font-size: 30px;
+        margin-bottom: -40px;
+        margin-top: -30px;
+    }
+    .right{
+        display: flex;
+        gap: 5px;
+        padding-right: 10px;
+        flex-direction: column;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .choose-bgc{
+        font-size: 13px;
+    }
+    .bgbtn{
+        scale: 0.8;
+    }
+    #odin, #github{
+        scale: 0.7;
+    }
+    .typewriter, .subsubtext, .subtext{
+        text-align: center;
+    }
+    .Mid-section{
+        scale: 0.5;
+    }
+    .User-rounds{
+        padding-left: 0px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: flex-start;
+    }
+
+
+
+
 }

@@ -186,7 +186,3 @@ function newGame(){//new game button
  //  document.querySelector('#newRound').disabled = false;//enable round button again
    resetScores();
 }
-
-
-
-
