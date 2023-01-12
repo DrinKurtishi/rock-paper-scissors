@@ -128,17 +128,17 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  box-shadow: rgb(255, 255, 255) 2px 8px 8px -5px;
+  box-shadow: whitesmoke 2px 8px 8px -5px;
   min-width: 82px;
 }
 
 #newRound:hover, #newGame:hover {
-  box-shadow: rgb(255, 255, 255) 2px 12px 12px -5px;
   transform: translate3d(0, 1px, 0);
 }
 
 #newRound:active, #newGame:active {
-  box-shadow: rgb(255, 255, 255) 2px 8px 4px -6px;
+  scale: 0.9;
+  transition: 0.1s;
 }
 .gameButtons{
     display: flex;

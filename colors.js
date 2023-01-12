@@ -9,6 +9,9 @@ function DarkTheme(){
     document.getElementById("newRound").style.color = "whitesmoke";
     document.getElementById("newGame").style.backgroundColor = "#202020";
     document.getElementById("newGame").style.color = "whitesmoke";
+    document.getElementById("newRound").style.boxShadow = "whitesmoke 2px 8px 8px -5px";
+    document.getElementById("newGame").style.boxShadow = "whitesmoke 2px 8px 8px -5px";
+
 }
 function LightTheme(){
     document.body.style.color = "#121212";
@@ -16,6 +19,8 @@ function LightTheme(){
     document.getElementById("newRound").style.color = "#121212";
     document.getElementById("newGame").style.backgroundColor = "#cacccb";
     document.getElementById("newGame").style.color = "#121212";
+    document.getElementById("newRound").style.boxShadow = "black 2px 8px 8px -5px";
+    document.getElementById("newGame").style.boxShadow = "black 2px 8px 8px -5px";
 }
 function purple(){
     document.body.style.backgroundColor="#3a093a";//background color
@@ -39,7 +44,6 @@ function white(){
 }
 function black(){
     document.body.style.backgroundColor="#121212";
-    document.body.style.color = "whitesmoke";
     DarkTheme();
     transition();
 }
