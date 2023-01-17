@@ -33,7 +33,7 @@ function blue(){
     transition();
 }
 function yellow(){
-    document.body.style.backgroundColor="rgb(255, 190, 0)";
+    document.body.style.backgroundColor="#FFDB58";
     LightTheme();
     transition();
 }
