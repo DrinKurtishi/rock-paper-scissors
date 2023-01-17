@@ -21,6 +21,10 @@
     gap: 20px;
     padding-right: 25px;
 }
+#odin:hover, #github:hover{
+    scale: 1.05;
+    transition: 0.1s;
+}
 .left{
     display: flex;
     flex-direction: column;
