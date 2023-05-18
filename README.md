@@ -1,1 +1,1 @@
-Part of The Odin Project curriculum
+Rock paper scissors game in Javascript with GUI.
